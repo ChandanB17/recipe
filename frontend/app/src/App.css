@@ -3,25 +3,25 @@
 }
 
 .nav-item:hover{
-     border-bottom: 2px solid #DC4C64;
-    
+     border-bottom: 2px solid #000000;  
 }
 
 .btn btn-light:hover{
-  background-color: #DC4C64;
-  color:white;
+  background-color: #ffffff;
+  color:rgb(30, 25, 25);
 }
 
 .item:hover{
-background-color: #DC4C64;
+background-color: #5900ff79;
 }
 
 .navbar{
-  border-bottom: 2px solid #DC4C64;
+  border-bottom: 2px solid #ff0062;
 }
 
 .form-control{
-  border: 2px solid #DC4C64;
+  border: 2px solid #0000000f;
+  background-color: rgba(205, 216, 216, 0.297);
 }
 
 .nav-link{
