@@ -1,7 +1,9 @@
 import React from 'react'
-import Navbar from '../Components/Navbar'
-export const Dinner = () => {
+
+const Dinner = () => {
   return (
     <div>Dinner</div>
   )
 }
+
+export default Dinner

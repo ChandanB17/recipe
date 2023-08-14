@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-
-
-export default function Navbar() {
+import { Nav,Dropdown } from 'react-bootstrap';
+const Navbar = () =>{
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary py-4">
@@ -13,17 +12,17 @@ export default function Navbar() {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item dropdown">
-                <Link className="nav-link dropdown-toggle " to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <Dropdown as={Nav.Item}>
+                <Dropdown.Toggle as={Nav.Link} id="recipes-dropdown" className="nav-link">
                   Recipes
-                </Link>
-                <ul className="dropdown-menu">
-                  <li><Link className="dropdown-item" to="/">Breakfast</Link></li>
-                  <li><Link className="dropdown-item" to="/">Lunch</Link></li>
-                  <li><Link className="dropdown-item" to="/">Dinner</Link></li>
-                  <li><Link className="dropdown-item" to="/">Quick Snacks</Link></li>
-                </ul>
-              </li>
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  <Dropdown.Item as={Link} to="/Breakfast">Breakfast</Dropdown.Item>
+                  <Dropdown.Item as={Link} to="/Lunch">Lunch</Dropdown.Item>
+                  <Dropdown.Item as={Link} to="/Dinner">Dinner</Dropdown.Item>
+                  {/* Add more dropdown items as needed */}
+                </Dropdown.Menu>
+              </Dropdown>
               <li className="nav-item">
                   <Link className="nav-link active" aria-current="page" to="/About">About Us</Link>
                 </li>
@@ -42,3 +41,5 @@ export default function Navbar() {
     </div>
   )
 }
+
+export default Navbar

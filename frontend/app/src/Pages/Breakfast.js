@@ -1,7 +1,9 @@
 import React from 'react'
-import Navbar from '../Components/Navbar'
-export const Breakfast = () => {
+
+const Breakfast = () => {
   return (
     <div>Breakfast</div>
   )
 }
+
+export default Breakfast
