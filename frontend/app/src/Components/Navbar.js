@@ -25,12 +25,12 @@ export default function Navbar() {
                 </ul>
               </li>
               <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="/">About Us</Link>
+                  <Link className="nav-link active" aria-current="page" to="/About">About Us</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="/">Contact Us</Link>
+                  <Link className="nav-link active" aria-current="page" to="/Contact">Contact Us</Link>
                 </li>
-                <button className="btn btn-outline-warning mx-3" type="submit">Sign-up/Login</button>
+                <Link className="btn btn-outline-warning mx-3" type="submit" to="/Login">Sign-up/Login</Link>
             </ul>
             <form className="d-flex" role="search">
               <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
