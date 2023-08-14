@@ -17,9 +17,9 @@ const Navbar = () =>{
                   Recipes
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                  <Dropdown.Item as={Link} to="/Breakfast">Breakfast</Dropdown.Item>
-                  <Dropdown.Item as={Link} to="/Lunch">Lunch</Dropdown.Item>
-                  <Dropdown.Item as={Link} to="/Dinner">Dinner</Dropdown.Item>
+                  <Dropdown.Item className="item" as={Link} to="/Breakfast">Breakfast</Dropdown.Item>
+                  <Dropdown.Item className="item" as={Link} to="/Lunch">Lunch</Dropdown.Item>
+                  <Dropdown.Item className="item" as={Link} to="/Dinner">Dinner</Dropdown.Item>
                   {/* Add more dropdown items as needed */}
                 </Dropdown.Menu>
               </Dropdown>
@@ -29,11 +29,11 @@ const Navbar = () =>{
                 <li className="nav-item">
                   <Link className="nav-link active" aria-current="page" to="/Contact">Contact Us</Link>
                 </li>
-                <Link className="btn btn-outline-warning mx-3" type="submit" to="/Login">Sign-up/Login</Link>
+                <Link className="btn btn-outline-danger mx-3" type="submit" to="/Login">Sign-up/Login</Link>
             </ul>
             <form className="d-flex" role="search">
-              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button className="btn btn-outline-success" type="submit">Search</button>
+              <input className="f me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button className="btn btn-outline-danger" type="submit">Search</button>
             </form>
           </div>
         </div>

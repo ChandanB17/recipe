@@ -3,11 +3,34 @@
 }
 
 .nav-item:hover{
-     border-bottom: 2px solid yellow;
+     border-bottom: 2px solid #DC4C64;
     
 }
 
 .btn btn-light:hover{
-  background-color: yellow;
+  background-color: #DC4C64;
   color:white;
+}
+
+.item:hover{
+background-color: #DC4C64;
+}
+
+.navbar{
+  border-bottom: 2px solid #DC4C64;
+}
+
+.form-control{
+  border: 2px solid #DC4C64;
+}
+
+.nav-link{
+  font-weight: 700;
+  
+}
+.img-tag{
+  opacity: 0.7;
+  width: 650px;
+  height: 500px;
+  position: fixed;
 }
