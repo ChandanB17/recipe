@@ -20,6 +20,8 @@ const Navbar = () =>{
                   <Dropdown.Item className="item" as={Link} to="/Breakfast">Breakfast</Dropdown.Item>
                   <Dropdown.Item className="item" as={Link} to="/Lunch">Lunch</Dropdown.Item>
                   <Dropdown.Item className="item" as={Link} to="/Dinner">Dinner</Dropdown.Item>
+                  <Dropdown.Item className="item" as={Link} to="/AddRecipe">AddRecipe</Dropdown.Item>
+                
                   {/* Add more dropdown items as needed */}
                 </Dropdown.Menu>
               </Dropdown>

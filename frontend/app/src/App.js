@@ -9,8 +9,7 @@ import Contact from './Pages/Contact';
 import Breakfast from './Pages/Breakfast';
 import Lunch from './Pages/Lunch';
 import Dinner from './Pages/Dinner';
-
-
+import RecipeListPage from './Pages/RecipeListPage';
 function App() {
   return (
     <div>
@@ -24,6 +23,8 @@ function App() {
         <Route path="/Login" element={<Login/>}/>
         <Route path="/About" element={<About/>}/>
         <Route path="/Contact" element={<Contact/>}/>
+        <Route path="/AddRecipe" element={<RecipeListPage/>}/>
+
       </Routes>
       </BrowserRouter>
 
