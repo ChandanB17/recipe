@@ -1,0 +1,25 @@
+.create-recipe-form {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .create-recipe-form h2 {
+    margin-top: 0;
+  }
+  
+  .create-recipe-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .create-recipe-form input,
+  .create-recipe-form textarea,
+  .create-recipe-form button {
+    margin-bottom: 10px;
+  }
+  
+  /* Customize your styling as needed */
+  
