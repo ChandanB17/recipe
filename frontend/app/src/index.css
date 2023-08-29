@@ -11,3 +11,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* Add this CSS to your stylesheet */
+.recipe-image {
+  height: 200px; /* Set the desired image height */
+  object-fit: cover;
+}
+
+/* Make sure the height of the Card is 100% */
+.h-100 {
+  height: 100%;
+}
+
+/* Add flex styles to make the Card body content expand vertically */
+
+.flex-column {
+  flex-direction: column;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-wrapper {
+  margin-top: auto; /* Push the buttons to the bottom */
+}
+
+.button-wrapper .btn {
+  margin-top: 20px; /* Add spacing between buttons */
+}
