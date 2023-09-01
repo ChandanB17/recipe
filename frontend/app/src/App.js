@@ -10,6 +10,7 @@ import Breakfast from './Pages/Breakfast';
 import Lunch from './Pages/Lunch';
 import Dinner from './Pages/Dinner';
 import RecipeListPage from './Pages/RecipeListPage';
+import Footer from './Components/Footer';
 function App() {
   return (
     <div>
@@ -26,6 +27,7 @@ function App() {
         <Route path="/AddRecipe" element={<RecipeListPage/>}/>
 
       </Routes>
+      <Footer/>
       </BrowserRouter>
 
     </div>

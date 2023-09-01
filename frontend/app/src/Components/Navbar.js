@@ -4,7 +4,7 @@ import { Nav,Dropdown } from 'react-bootstrap';
 const Navbar = () =>{
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary py-4">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary py-1">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">Navbar</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,11 +31,14 @@ const Navbar = () =>{
                 <li className="nav-item">
                   <Link className="nav-link active" aria-current="page" to="/Contact">Contact Us</Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link active" aria-current="page" to="/Contact">Add recipes</Link>
+                </li>
                 <Link className="btn btn-outline-danger mx-3" type="submit" to="/Login">Sign-up/Login</Link>
             </ul>
-            <form className="d-flex" role="search">
-              <input className="f me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button className="btn btn-outline-danger" type="submit">Search</button>
+            <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn sr-btn btn-outline-danger" type="submit">Search</button>
             </form>
           </div>
         </div>

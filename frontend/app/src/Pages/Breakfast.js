@@ -3,7 +3,7 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import axios from 'axios';
 
 const API_KEY = '17041a4ddf19430db0f13105e2afb3f5';
-const breakfastQuery = 'breakfast';
+// const breakfastQuery = 'breakfast';
 
 const SearchComponent = ({ onSearch }) => {
   const [keywords, setKeywords] = useState('');
