@@ -7,8 +7,6 @@ import Login from './Pages/Login';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
 import Breakfast from './Pages/Breakfast';
-import Lunch from './Pages/Lunch';
-import Dinner from './Pages/Dinner';
 import RecipeListPage from './Pages/RecipeListPage';
 import Footer from './Components/Footer';
 function App() {
@@ -19,8 +17,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path='/Breakfast' element={<Breakfast/>}/>
-        <Route path="/Lunch" element={<Lunch/>}/>
-        <Route path="/Dinner" element={<Dinner/>}/>
         <Route path="/Login" element={<Login/>}/>
         <Route path="/About" element={<About/>}/>
         <Route path="/Contact" element={<Contact/>}/>
