@@ -1,6 +1,6 @@
-/* .nav-item {
-  position: relative;
-} */
+*{
+  font-family: cursive;
+}
 
 .nav-item:hover {
   border-bottom: 2px solid #ff0000;
@@ -32,9 +32,9 @@
 .head {
   text-align: center;
   padding: 10px;
-  background-color: black;
-  color:white;
-  margin-top: 10px;;
+  background-color: rgb(255, 255, 255);
+  color:rgb(255, 0, 76);
+  margin-top: 10px;
 }
 .card.m-card{
   border: 3px solid red;
@@ -73,6 +73,7 @@
 }
 .c-image {
   height: 400px;
+  opacity: 0.8;
 }
 .center {
   width: 100%;
@@ -148,4 +149,17 @@ a.linkedin {
   text-align: center;
   padding:10px;
   justify-content: center;
+}
+
+.car{
+  font-weight: bolder;
+  font-size: 30px;
+  color: #000000;
+  font-family: cursive;
+}
+.carhe{
+  font-weight: bolder;
+  font-size: 50px;
+  color: #000000;
+  font-family:cursive;
 }

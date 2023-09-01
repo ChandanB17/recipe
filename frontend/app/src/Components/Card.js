@@ -16,7 +16,7 @@ export default function Card() {
                   <div className="card-body">
                     <h5 className="card-title m-card">Indian</h5>
                     <p className="card-text">Dubai is famous for wealth, being expensive, and being a popular luxury travel destination.</p>
-                    <Link to="/dub" className="btn m-btn btn-info">View Recipes</Link>
+                    <Link to="/Breakfast" className="btn m-btn btn-info">View Recipes</Link>
                   </div>
                 </div>
               </div>
@@ -27,7 +27,7 @@ export default function Card() {
                   <div className="card-body">
                     <h5 className="card-title m-card">Italian</h5>
                     <p className="card-text"> It is famous for being among the most densely populated places in the world.</p>
-                    <Link to="/sin" className="btn m-btn btn-info">View Recipes</Link>
+                    <Link to="/Breakfast" className="btn m-btn btn-info">View Recipes</Link>
                   </div>
                 </div>
               </div>
@@ -38,7 +38,7 @@ export default function Card() {
                   <div className="card-body">
                     <h5 className="card-title m-card">American</h5>
                     <p className="card-text">Nepal is the country of the Mount Everest, the highest mountain peak in the world.</p>
-                    <Link to="/nep" className="btn m-btn btn-info">View Recipes</Link>
+                    <Link to="/Breakfast" className="btn m-btn btn-info">View Recipes</Link>
                   </div>
                 </div>
               </div>
@@ -49,7 +49,7 @@ export default function Card() {
                   <div className="card-body">
                     <h5 className="card-title m-card">Australian</h5>
                     <p className="card-text">Nepal is the country of the Mount Everest, the highest mountain peak in the world.</p>
-                    <Link to="/nep" className="btn m-btn btn-info">View Recipes</Link>
+                    <Link to="/Breakfast" className="btn m-btn btn-info">View Recipes</Link>
                   </div>
                 </div>
               </div>
@@ -62,37 +62,37 @@ export default function Card() {
         <div className='m-5'>
           <div className='container'>
             <div className='row'>
-              <div className='c-card col-md-1 mx-3 '>
-                <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80" className='img' alt="Error 404 " />
+              <div className='c-card col-md-1 mx-3 ' >
+              <Link to='/Breakfast'><img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80" className='img'  alt="Error 404 " /></Link>
                 <p className='para'>Sweet</p>
               </div>
 
               <div className='c-card col-md-1 mx-3'>
-                <img src="https://images.unsplash.com/photo-1647482770207-06bfdc9458a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" className="img" alt="Error 404 " />
+              <Link to='/Breakfast'><img src="https://images.unsplash.com/photo-1647482770207-06bfdc9458a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" className="img"  alt="Error 404 " /></Link>
                 <p className='para'>Dinner</p>
               </div>
               <div className='c-card col-md-1 mx-3'>
-                <img src="https://images.unsplash.com/photo-1598214886806-c87b84b7078b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1925&q=80" className="img" alt="Error 404 " />
+                <Link to='/Breakfast'><img src="https://images.unsplash.com/photo-1598214886806-c87b84b7078b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1925&q=80" className="img"  alt="Error 404 " /></Link>
                 <p className='para'>Tasty</p>
               </div>
               <div className='c-card col-md-1 mx-3 '>
-                <img src="https://images.unsplash.com/photo-1552654180-304709d2041e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1965&q=80" className="img" alt="Error 404 " />
+                <Link to='/Breakfast'><img src="https://images.unsplash.com/photo-1552654180-304709d2041e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1965&q=80" className="img"  alt="Error 404 " /></Link>
                 <p className='para'>Healthy</p>
               </div>
               <div className='c-card col-md-1 mx-3 '>
-                <img src="https://images.unsplash.com/photo-1682970468783-0cc45cfdd1b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80" className="img" alt="Error 404 " />
+                <Link to='/Breakfast'><img src="https://images.unsplash.com/photo-1682970468783-0cc45cfdd1b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80" className="img"  alt="Error 404 " /></Link>
                 <p className='para'>Instant</p>
               </div>
               <div className='c-card col-md-1 mx-3 '>
-                <img src="https://images.unsplash.com/photo-1600850056064-a8b380df8395?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" className="img" alt="Error 404" />
-                <p className='para'>Vegan</p>
+                <Link to='/Breakfast'><img src="https://images.unsplash.com/photo-1600850056064-a8b380df8395?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" className="img"  alt="Error 404" />
+</Link>                <p className='para'>Vegan</p>
               </div>
               <div className='c-card col-md-1 mx-3 '>
-                <img src="https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80" className="img" alt="Error 404 " />
+                <Link to='/Breakfast'><img src="https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80" className="img"  alt="Error 404 " /></Link>
                 <p className='para'>Salads</p>
               </div>
               <div className='c-card col-md-1 mx-3 '>
-                <img src="https://images.unsplash.com/photo-1652088079703-38f4a8d6b981?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1895&q=80" className="img" alt="Error 404 " />
+                <Link to='/Breakfast'><img src="https://images.unsplash.com/photo-1652088079703-38f4a8d6b981?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1895&q=80" className="img"  alt="Error 404 " /></Link>
                 <p className='para'>Soups</p>
               </div>
             </div>
