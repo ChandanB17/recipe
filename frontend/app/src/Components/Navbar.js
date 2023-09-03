@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import Headroom from 'react-headroom'
 const Navbar = () => {
   return (
     <div>
+      <Headroom>
       <nav className="navbar navbar-expand-lg bg-body-tertiary py-1">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">Navbar</Link>
@@ -23,15 +25,16 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/AddRecipe">Add recipes</Link>
               </li>
-              <Link className="btn btn-outline-danger mx-3" type="submit" to="/Login">Sign-up/Login</Link>
+              <Link className="btn nbtn btn-outline-danger mx-3" type="submit" to="/Login">Sign-up/Login</Link>
             </ul>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Type here" aria-label="Search" />
-              <button class="btn btn-outline-danger" type="submit">Search</button>
+              <button class="btn nbtn btn-outline-danger" type="submit">Search</button>
             </form>
           </div>
         </div>
       </nav>
+      </Headroom>
     </div>
   )
 }

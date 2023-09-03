@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 
 const API_KEY = '17041a4ddf19430db0f13105e2afb3f5';
 
