@@ -1,12 +1,12 @@
-/* .nav-item {
-  position: relative;
-} */
+*{
+  font-family: cursive;
+}
 
 .nav-item:hover {
   border-bottom: 2px solid #ff0000;
 }
 
-.btn btn-light:hover {
+.btn :hover {
   background-color: #ffffff;
   color: rgb(255, 0, 0);
 }
@@ -17,8 +17,6 @@
 
 .navbar {
   border-bottom: 2px solid #ff0062;
-  position: sticky;
-  z-index: 1;
 }
 
 .form-control {
@@ -27,14 +25,15 @@
 }
 
 .nav-link {
-  font-weight: 700;
+  font-weight:bolder;
 }
 .head {
   text-align: center;
+  font-weight: bolder;
   padding: 10px;
-  background-color: black;
-  color:white;
-  margin-top: 10px;;
+  background-color: rgb(255, 255, 255);
+  color:rgb(255, 0, 76);
+  margin-top: 10px;
 }
 .card.m-card{
   border: 3px solid red;
@@ -67,12 +66,19 @@
   font-weight: bold;
   padding-left: 25px;
 }
+.parah {
+  text-align: center;
+  justify-content: center;
+  font-weight:600;
+  padding-left: 25px;
+}
 
 .card.card3 {
   max-width: 540px;
 }
 .c-image {
   height: 400px;
+  opacity: 0.8;
 }
 .center {
   width: 100%;
@@ -111,7 +117,17 @@
   justify-content: center;
   display:flex;
 }
+.socials-container {
+  background: white;
+  justify-content: center;
+  padding-bottom: 10px;
+}
 a.social {
+  margin: 50px;
+  transition: transform 250ms;
+  display: inline-block;
+}
+a.socials {
   margin: 50px;
   transition: transform 250ms;
   display: inline-block;
@@ -148,4 +164,66 @@ a.linkedin {
   text-align: center;
   padding:10px;
   justify-content: center;
+}
+
+.car{
+  font-weight: bolder;
+  font-size: 30px;
+  color: #000000;
+  font-family: cursive;
+}
+.carhe{
+  font-weight: bolder;
+  font-size: 50px;
+  color: #000000;
+  font-family:cursive;
+}
+.card-header{
+  padding: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  border-bottom:2px solid #eb3223;
+  
+}
+.about{
+  padding-left: 30px;
+  padding-right:30px;
+}
+
+.card-card{
+  border: 2px solid #ff0000;
+}
+.card-title{
+  font-weight: bold;
+  font-size: 20px;
+}
+.btn-outline-danger{
+  background-color:#ffffff;
+  color: #eb3223;
+  width: 300px;
+}
+
+a.youtubes {
+  color: #eb3223;
+  margin: 10px;
+}
+
+a.facebooks {
+  color: #4968ad;
+  margin: 10px;
+}
+
+a.twitters {
+  color: #49a1eb;
+  margin: 10px;
+}
+
+a.instagrams {
+  color: rgb(251, 255, 0);
+  margin: 10px;
+}
+
+a.Linkedins {
+  color: rgb(0, 60, 255);
+  margin: 10px;
 }

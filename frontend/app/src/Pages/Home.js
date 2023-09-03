@@ -8,6 +8,7 @@ import Sm from '../Components/Sm';
 export default function Home() {
   return (
     <div>
+      
       <Carousel />
       <Card />
       <Sm/>

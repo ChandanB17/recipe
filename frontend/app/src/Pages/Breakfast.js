@@ -3,7 +3,6 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import axios from 'axios';
 
 const API_KEY = '17041a4ddf19430db0f13105e2afb3f5';
-// const breakfastQuery = 'breakfast';
 
 const SearchComponent = ({ onSearch }) => {
   const [keywords, setKeywords] = useState('');
@@ -28,25 +27,25 @@ const SearchComponent = ({ onSearch }) => {
         type="text"
         placeholder="Keywords"
         value={keywords}
-        onChange={e => setKeywords(e.target.value)}
+        onChange={(e) => setKeywords(e.target.value)}
       />
       <input
         type="text"
         placeholder="Ingredients"
         value={ingredients}
-        onChange={e => setIngredients(e.target.value)}
+        onChange={(e) => setIngredients(e.target.value)}
       />
       <input
         type="text"
         placeholder="Cuisine"
         value={cuisine}
-        onChange={e => setCuisine(e.target.value)}
+        onChange={(e) => setCuisine(e.target.value)}
       />
       <input
         type="text"
         placeholder="Dietary Restrictions"
         value={dietaryRestrictions}
-        onChange={e => setDietaryRestrictions(e.target.value)}
+        onChange={(e) => setDietaryRestrictions(e.target.value)}
       />
       <button onClick={handleSearch}>Search</button>
     </div>
@@ -69,7 +68,6 @@ const Breakfast = () => {
       cuisine: searchCriteria.cuisine,
       mealType: 'breakfast', // Specify the meal type as 'breakfast'
       number: 18,
-      instructionsRequired: true,
     };
 
     if (searchCriteria.ingredients) {
@@ -83,16 +81,35 @@ const Breakfast = () => {
       .get(`https://api.spoonacular.com/recipes/complexSearch`, {
         params: apiParams,
       })
-      .then(response => {
+      .then(async (response) => {
         const recipes = response.data.results;
-        setBreakfastItems(recipes.map(recipe => ({ ...recipe, showInstructions: false })));
+        // Fetch instructions for each recipe
+        const recipePromises = recipes.map(async (recipe) => {
+          const instructionsResponse = await axios.get(
+            `https://api.spoonacular.com/recipes/${recipe.id}/analyzedInstructions`,
+            {
+              params: {
+                apiKey: API_KEY,
+              },
+            }
+          );
+          const instructions = instructionsResponse.data;
+          return {
+            ...recipe,
+            showInstructions: false,
+            instructions: instructions.length > 0 ? instructions[0].steps : [],
+          };
+        });
+        Promise.all(recipePromises).then((recipesWithInstructions) => {
+          setBreakfastItems(recipesWithInstructions);
+        });
       })
-      .catch(error => {
+      .catch((error) => {
         console.error('Error:', error);
       });
   }, [searchCriteria]);
 
-  const toggleInstructions = index => {
+  const toggleInstructions = (index) => {
     const updatedItems = [...breakfastItems];
     updatedItems[index].showInstructions = !updatedItems[index].showInstructions;
     setBreakfastItems(updatedItems);
@@ -112,11 +129,11 @@ const Breakfast = () => {
                 <Card.Title>{item.title}</Card.Title>
                 <Card.Text>{item.summary}</Card.Text>
                 <div className="button-wrapper">
-                  {item.showInstructions && item.analyzedInstructions && item.analyzedInstructions.length > 0 ? (
+                  {item.showInstructions && item.instructions.length > 0 ? (
                     <div className="instructions">
                       <h5>Instructions:</h5>
                       <ol>
-                        {item.analyzedInstructions[0].steps.map((step, stepIndex) => (
+                        {item.instructions.map((step, stepIndex) => (
                           <li key={stepIndex}>{step.step}</li>
                         ))}
                       </ol>
@@ -135,4 +152,5 @@ const Breakfast = () => {
     </Container>
   );
 };
+
 export default Breakfast;

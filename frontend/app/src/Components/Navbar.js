@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-const Navbar = () =>{
+import Headroom from 'react-headroom'
+const Navbar = () => {
   return (
     <div>
+      <Headroom>
       <nav className="navbar navbar-expand-lg bg-body-tertiary py-1">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">Navbar</Link>
@@ -12,26 +14,27 @@ const Navbar = () =>{
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="/About">About Us</Link>
-                </li>
-            <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="/Breakfast">Recipes</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="/Contact">Contact Us</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="/AddRecipe">Add recipes</Link>
-                </li>
-                <Link className="btn btn-outline-danger mx-3" type="submit" to="/Login">Sign-up/Login</Link>
+                <Link className="nav-link active" aria-current="page" to="/About">About Us</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/Breakfast">Recipes</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/Contact">Contact Us</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/AddRecipe">Add recipes</Link>
+              </li>
+              <Link className="btn nbtn btn-outline-danger mx-3" type="submit" to="/Login">Sign-up/Login</Link>
             </ul>
             <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn sr-btn btn-outline-danger" type="submit">Search</button>
+              <input class="form-control me-2" type="search" placeholder="Type here" aria-label="Search" />
+              <button class="btn nbtn btn-outline-danger" type="submit">Search</button>
             </form>
           </div>
         </div>
       </nav>
+      </Headroom>
     </div>
   )
 }
