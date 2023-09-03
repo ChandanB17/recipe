@@ -47,7 +47,7 @@ const Contact=()=>{
                 </Col>
                 <Col lg="6" className="form-group">
                   <input
-                    className="form-control rounded-0"
+                    className="form-control rounded-10"
                     id="email"
                     name="email"
                     placeholder="Email"
@@ -56,8 +56,9 @@ const Contact=()=>{
                   />
                 </Col>
               </Row>
+              <br></br>
               <textarea
-                className="form-control rounded-0"
+                className="form-control rounded-10"
                 id="message"
                 name="message"
                 placeholder="Message"
@@ -75,7 +76,9 @@ const Contact=()=>{
             </form>
           </Col>
         </Row>
+        <br></br>
       </Container>
+
   );
 }
 
