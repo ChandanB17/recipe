@@ -6,7 +6,7 @@
   border-bottom: 2px solid #ff0000;
 }
 
-.nbtn :hover {
+.btn :hover {
   background-color: #ffffff;
   color: rgb(255, 0, 0);
 }
@@ -117,7 +117,17 @@
   justify-content: center;
   display:flex;
 }
+.socials-container {
+  background: white;
+  justify-content: center;
+  padding-bottom: 10px;
+}
 a.social {
+  margin: 50px;
+  transition: transform 250ms;
+  display: inline-block;
+}
+a.socials {
   margin: 50px;
   transition: transform 250ms;
   display: inline-block;
@@ -191,4 +201,29 @@ a.linkedin {
   background-color:#ffffff;
   color: #eb3223;
   width: 300px;
+}
+
+a.youtubes {
+  color: #eb3223;
+  margin: 10px;
+}
+
+a.facebooks {
+  color: #4968ad;
+  margin: 10px;
+}
+
+a.twitters {
+  color: #49a1eb;
+  margin: 10px;
+}
+
+a.instagrams {
+  color: rgb(251, 255, 0);
+  margin: 10px;
+}
+
+a.Linkedins {
+  color: rgb(0, 60, 255);
+  margin: 10px;
 }

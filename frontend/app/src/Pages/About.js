@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card,Button } from 'react-bootstrap';
 import './About.css'
+import Sma from '../Components/Sma';
 const About = () => {
   return (
     <div className='about'>
@@ -20,6 +21,7 @@ const About = () => {
           Bala@gmail.com
         </Card.Text>
         <Button className='btn btn-outline-danger' >Contact</Button>
+        <Sma/>
       </Card.Body>
     </Card><Card className="text-center">
       <Card.Header>CFO & Developer</Card.Header>
@@ -32,6 +34,7 @@ const About = () => {
           Kiara@gmail.com
         </Card.Text>
         <Button className='btn btn-outline-danger' >Contact</Button>
+        <Sma/>
       </Card.Body>
     </Card><Card className="text-center">
       <Card.Header>Full-stack developer</Card.Header>
@@ -44,6 +47,7 @@ const About = () => {
           Vijay@gmail.com
         </Card.Text>
         <Button className='btn btn-outline-danger' >Contact</Button>
+        <Sma/>
       </Card.Body>
     </Card>
     <Card className="text-center">
@@ -57,6 +61,7 @@ const About = () => {
           Abhi@gmail.com
         </Card.Text>
         <Button className='btn btn-outline-danger' >Contact</Button>
+        <Sma/>
       </Card.Body>
     </Card>
     </div>
