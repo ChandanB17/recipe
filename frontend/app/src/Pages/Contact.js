@@ -1,10 +1,12 @@
 import React from 'react';
-import Smc from '../Components/Smc.js';
+//import Smc from '../Components/Smc';
+import { Container, Row, Col } from 'react-bootstrap';
+import { contactConfig } from './config'; // Import 'contactConfig' from a configuration file
+
 
 const RecipeContactUs = () => {
   return (
       <Container>
-     
         <Row className="mb-5 mt-3">
           <Col lg="8">
             <h1 className="display-4 mb-4">Contact Me</h1>
