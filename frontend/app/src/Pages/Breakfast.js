@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import axios from 'axios';
 
-const API_KEY = '17041a4ddf19430db0f13105e2afb3f5';
+const API_KEY = '17041a4ddf19430db0f13105e2afb3f5'; 
 
 const SearchComponent = ({ onSearch }) => {
   const [keywords, setKeywords] = useState('');
@@ -83,29 +83,36 @@ const Breakfast = () => {
       })
       .then(async (response) => {
         const recipes = response.data.results;
+
         // Fetch instructions for each recipe
         const recipePromises = recipes.map(async (recipe) => {
-          const instructionsResponse = await axios.get(
-            `https://api.spoonacular.com/recipes/${recipe.id}/analyzedInstructions`,
-            {
-              params: {
-                apiKey: API_KEY,
-              },
-            }
-          );
-          const instructions = instructionsResponse.data;
-          return {
-            ...recipe,
-            showInstructions: false,
-            instructions: instructions.length > 0 ? instructions[0].steps : [],
-          };
+          try {
+            const instructionsResponse = await axios.get(
+              `https://api.spoonacular.com/recipes/${recipe.id}/analyzedInstructions`,
+              {
+                params: {
+                  apiKey: API_KEY,
+                },
+              }
+            );
+            const instructions = instructionsResponse.data;
+            return {
+              ...recipe,
+              showInstructions: false,
+              instructions: instructions.length > 0 ? instructions[0].steps : [],
+            };
+          } catch (error) {
+            console.error('Error fetching instructions:', error);
+            return recipe;
+          }
         });
+
         Promise.all(recipePromises).then((recipesWithInstructions) => {
           setBreakfastItems(recipesWithInstructions);
         });
       })
       .catch((error) => {
-        console.error('Error:', error);
+        console.error('Error fetching recipes:', error);
       });
   }, [searchCriteria]);
 
@@ -119,7 +126,7 @@ const Breakfast = () => {
     <Container className="my-5">
       <SearchComponent onSearch={setSearchCriteria} />
 
-      <h1 className="text-center">Breakfast Menu</h1>
+      <h1 className="text-center">Recipes</h1>
       <Row className="mt-4">
         {breakfastItems.map((item, index) => (
           <Col key={index} md="4" className="mb-4">
