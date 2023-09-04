@@ -1,3 +1,7 @@
+*{
+  font-family: cursive;
+}
+
 .recipe-list-page {
     display: flex;
     flex-direction: column;
@@ -14,10 +18,10 @@
   
   .recipe-card {
     background-color: #ffffff;
+    border: 2px solid red;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    max-width: 300px;
     text-align: left;
   }
   
@@ -26,16 +30,18 @@
   }
   
   .recipe-card button {
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: white;
+    color: #ff1515;
     border: none;
     border-radius: 4px;
     padding: 8px 12px;
     cursor: pointer;
+    border: 2px solid #ff1515;
   }
   
   .recipe-card button:hover {
-    background-color: #0056b3;
+    background-color: #ff1515;
+    color:white;
   }
   
   /* Customize your styling as needed */

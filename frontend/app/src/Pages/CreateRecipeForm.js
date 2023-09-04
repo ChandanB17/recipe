@@ -21,16 +21,40 @@ const CreateRecipeForm = ({ onSubmit, editRecipe }) => {
 
   return (
     <div className="create-recipe-form">
-      <h2>{editRecipe ? 'Edit Recipe' : 'Submit a New Recipe'}</h2>
+      <h2 className='head'>{editRecipe ? 'Edit Recipe' : 'Submit a New Recipe'}</h2>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Recipe Title" value={title} onChange={(e) => setTitle(e.target.value)} />
-        <textarea
-          placeholder="Ingredients (comma-separated)"
-          value={ingredients}
-          onChange={(e) => setIngredients(e.target.value)}
-        />
-        <textarea placeholder="Instructions" value={instructions} onChange={(e) => setInstructions(e.target.value)} />
-        <button type="submit">{editRecipe ? 'Update Recipe' : 'Submit Recipe'}</button>
+        <div>
+
+          <div>
+            <label>Title:</label>
+          </div>
+          <div>
+            
+            <input type="text" placeholder="Recipe Title" value={title} onChange={(e) => setTitle(e.target.value)} />
+          </div>
+
+          <div>
+            <label>Ingredients:</label>
+            </div>
+            <div>
+            <textarea
+              placeholder="Ingredients (comma-separated)"
+              value={ingredients}
+              onChange={(e) => setIngredients(e.target.value)}
+            />
+          </div>
+
+          <div>
+            <label>Instructions:</label>
+          </div>
+          <div>
+
+            <textarea placeholder="Instructions" value={instructions} onChange={(e) => setInstructions(e.target.value)} />
+          </div>
+          <div>
+          <button type="submit">{editRecipe ? 'Update Recipe' : 'Submit Recipe'}</button>
+        </div>
+        </div>
       </form>
     </div>
   );
