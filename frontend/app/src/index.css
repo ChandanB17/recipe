@@ -25,15 +25,11 @@ code {
   transform: scale(1.1);
 }
 
-<<<<<<< HEAD
 /* 
 .text-center{
   background-color: black;
   color: white;
 } */
-=======
-/* Add flex styles to make the Card body content expand vertically */
->>>>>>> ceffeb6fdf3e41f1254dafcd31f9ab282e00452d
 
 .flex-column {
   flex-direction: column;
