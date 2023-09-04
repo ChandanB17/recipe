@@ -5,7 +5,11 @@
 .nav-item:hover {
   border-bottom: 2px solid #ff0000;
 }
-
+.btn{
+  background: white;
+  color: red;
+  border: 2px solid red;
+}
 .btn :hover {
   background-color: #ffffff;
   color: rgb(255, 0, 0);
@@ -117,10 +121,21 @@
   justify-content: center;
   display:flex;
 }
+.socialc-container {
+  padding: 25px 50px;
+  justify-content: center;
+  display:flex;
+}
 .socials-container {
   background: white;
   justify-content: center;
   padding-bottom: 10px;
+  padding-top: 10px;
+}
+.socialc-container {
+justify-content: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 a.social {
   margin: 50px;
@@ -132,7 +147,15 @@ a.socials {
   transition: transform 250ms;
   display: inline-block;
 }
+a.socialc {
+  margin: 50px;
+  transition: transform 250ms;
+  display: inline-block;
+}
 a.social:hover {
+  transform: scale(1.2);
+}
+a.socialc:hover {
   transform: scale(1.2);
 }
 a.youtube {
@@ -226,4 +249,160 @@ a.instagrams {
 a.Linkedins {
   color: rgb(0, 60, 255);
   margin: 10px;
+}
+a.youtubec {
+  color: #eb3223;
+  margin: 20px;
+}
+
+a.facebookc {
+  color: #4968ad;
+  margin: 20px;
+}
+
+a.twitterc {
+  color: #49a1eb;
+  margin: 20px;
+}
+
+a.instagramc {
+  color: rgb(251, 255, 0);
+  margin: 20px;
+}
+
+a.Linkedinc {
+  color: rgb(0, 60, 255);
+  margin: 20px;
+}
+
+.contact-us-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-image {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.contact-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contact-form {
+  flex: 1;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.recipe-contact-us-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-image {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.contact-image img {
+  max-width: 100%;
+  height: 800px;
+}
+
+.contact-form {
+  flex: 1;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #eb3223;
+
+}
+
+.contact-form h2 {
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.headc{
+  text-align: center;
+  font-weight: bolder;
+  padding: 10px;
+  color:rgb(255, 0, 76);
+  margin-top: 10px;
+}
+.btn.btnc {
+  background: white;
+  color: red;
+  border: 2px solid red;
+  margin-left: 153px;
+}
+.btn.btnc:hover{
+  background: red;
+  color:white;
 }

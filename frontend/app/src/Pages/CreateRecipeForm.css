@@ -1,25 +1,73 @@
+/* CreateRecipeForm.css */
+
 .create-recipe-form {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px;
-  }
-  
-  .create-recipe-form h2 {
-    margin-top: 0;
-  }
-  
-  .create-recipe-form form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .create-recipe-form input,
-  .create-recipe-form textarea,
-  .create-recipe-form button {
-    margin-bottom: 10px;
-  }
-  
-  /* Customize your styling as needed */
-  
+  /* background-image: url('add.jpg'); Replace 'path/to/your-image.jpg' with the actual path to your image */
+  /* background-size: cover; Adjust the sizing as needed */
+  /* background-repeat: no-repeat; Prevent image from repeating */
+  /* background-position: center; Center the image */
+  background-color: #ffffff;
+  border-radius: 15px;
+  border: 2px solid red;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto; /* Adjust margin to center vertically */
+  width: 50%; /* You can adjust this margin as needed */
+}
+
+.create-recipe-form h2 {
+  margin-top: 0;
+}
+
+.create-recipe-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-recipe-form input,
+.create-recipe-form textarea,
+.create-recipe-form button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.create-recipe-form input::placeholder,
+.create-recipe-form textarea::placeholder {
+  color: #999;
+}
+
+.create-recipe-form button {
+  background-color:white;
+  color: #ff0000;
+  border: 2px solid #ff0000;
+  cursor: pointer;
+}
+.create-recipe-form button:hover {
+  background-color:#ff0000;
+  color: white;
+}
+
+/* Additional styles for the card appearance */
+.recipe-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+/* Styles for label elements */
+.create-recipe-form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* Error message styles (if applicable) */
+.create-recipe-form .error-message {
+  color: #ff0000;
+  font-size: 14px;
+}
