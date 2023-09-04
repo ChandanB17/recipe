@@ -9,6 +9,7 @@ import Contact from './Pages/Contact';
 import Breakfast from './Pages/Breakfast';
 import RecipeListPage from './Pages/RecipeListPage';
 import Footer from './Components/Footer';
+
 function App() {
   return (
     <div>
