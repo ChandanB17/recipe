@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import axios from 'axios';
 
-const API_KEY = '17041a4ddf19430db0f13105e2afb3f5';
+const API_KEY = 'a168381f9f494abfba90e1bacd1aff20';
 
 const SearchComponent = ({ onSearch }) => {
   const [keywords, setKeywords] = useState('');
@@ -67,7 +67,7 @@ const Breakfast = () => {
       query: searchCriteria.keywords,
       cuisine: searchCriteria.cuisine,
       mealType: 'breakfast', // Specify the meal type as 'breakfast'
-      number: 18,
+      number: 9,
     };
 
     if (searchCriteria.ingredients) {

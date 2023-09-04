@@ -24,6 +24,10 @@ code {
   height: 100%;
 }
 
+.h-100:hover{
+  transform: scale(1.1);
+}
+
 /* Add flex styles to make the Card body content expand vertically */
 
 .flex-column {
