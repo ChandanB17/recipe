@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import Headroom from 'react-headroom'
+import { useAuth0 } from "@auth0/auth0-react";
 const Navbar = () => {
+    const { loginWithRedirect, isAuthenticated , logout , user } = useAuth0();
   return (
     <div>
       <Headroom>
@@ -12,7 +14,7 @@ const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 align-centre">
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/About">About Us</Link>
               </li>
@@ -25,7 +27,20 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/AddRecipe">Add recipes</Link>
               </li>
-              <Link className="btn nbtn btn-outline-danger mx-3" type="submit" to="/Login">Sign-up/Login</Link>
+              {isAuthenticated && (
+                  <li><p> {user.name}</p></li>
+                ) 
+              }
+              {isAuthenticated ? (
+                   <li>
+                   <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log Out</button>
+                   </li>
+              ):(
+                <li>
+                   <button onClick={() => loginWithRedirect()}>Log In</button>
+                 </li>
+                
+              )}     
             </ul>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Type here" aria-label="Search" />
