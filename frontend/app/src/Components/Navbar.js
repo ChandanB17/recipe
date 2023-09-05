@@ -28,6 +28,9 @@ const Navbar = () => {
                 <Link className="nav-link active" aria-current="page" to="/Contact">Contact Us</Link>
               </li>
               <li className="nav-item">
+                  <Link className="nav-link active" aria-current="page" to="/AddRecipe">Add recipes</Link>
+                </li>
+              <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/Login">Login</Link>
               </li>
               
@@ -48,9 +51,7 @@ const Navbar = () => {
                 
               )} 
               {isAuthenticated && (
-                  <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="/AddRecipe">Add recipes</Link>
-                </li>
+                  
                 ) 
               }     */}
             </ul>
