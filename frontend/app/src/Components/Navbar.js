@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import Headroom from 'react-headroom'
 import { useAuth0 } from "@auth0/auth0-react";
+import logo from './images/logo.png';
 const Navbar = () => {
     const { loginWithRedirect, isAuthenticated , logout , user } = useAuth0();
   return (
@@ -9,7 +10,9 @@ const Navbar = () => {
       <Headroom>
       <nav className="navbar navbar-expand-lg bg-body-tertiary py-1">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">Navbar</Link>
+        <Link class="navbar-brand" to="/">
+      <img src={logo} alt="FlavourFusion" width="60" height="60"/>
+    </Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -28,16 +31,16 @@ const Navbar = () => {
                 <Link className="nav-link active" aria-current="page" to="/AddRecipe">Add recipes</Link>
               </li>
               {isAuthenticated && (
-                  <li><p> {user.name}</p></li>
+                  <li><p className='name px-2 mx-2 py-2'> {user.name}</p></li>
                 ) 
               }
               {isAuthenticated ? (
                    <li>
-                   <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log Out</button>
+                   <div className='btn btn-outline-danger' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log Out</div>
                    </li>
               ):(
                 <li>
-                   <button onClick={() => loginWithRedirect()}>Log In</button>
+                   <div className='btn btn-outline-danger' onClick={() => loginWithRedirect()}>Log In</div>
                  </li>
                 
               )}     
