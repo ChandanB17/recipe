@@ -11,19 +11,22 @@ const RecipeContactUs = () => {
         <h2 className='headc'>Contact Us</h2>
         <p>If you have any questions or feedback, feel free to get in touch!</p>
         <form>
-          <div className="form-group">
             <label htmlFor="name">Name</label>
+          <div className="form-group">
             <input type="text" id="name" name="name" required />
           </div>
-          <div className="form-group">
             <label htmlFor="email">Email</label>
+          <div className="form-group">
             <input type="email" id="email" name="email" required />
           </div>
-          <div className="form-group">
             <label htmlFor="message">Message</label>
+          <div className="form-group">
             <textarea id="message" name="message" rows="4" required></textarea>
           </div>
+          <div className="form-group">
           <button className='btn btnc btn-outline-danger ' type="submit">Send Message</button>
+          </div>
+          
         </form>
         <Smc/>
       </div>

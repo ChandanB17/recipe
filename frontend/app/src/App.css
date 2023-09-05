@@ -223,7 +223,11 @@ a.linkedin {
 .btn-outline-danger{
   background-color:#ffffff;
   color: #eb3223;
-  width: 300px;
+  width: 150px;
+
+}
+.btn.nbtn{
+    margin-left: 60px;
 }
 
 a.youtubes {
@@ -293,7 +297,9 @@ a.Linkedinc {
 }
 
 .contact-form {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #f5f5f5;
   padding: 20px;
   border-radius: 5px;
@@ -306,6 +312,10 @@ a.Linkedinc {
 
 .form-group {
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-group label {
@@ -396,12 +406,12 @@ button:hover {
   color:rgb(255, 0, 76);
   margin-top: 10px;
 }
-.btn.btnc {
+/* .btn.btnc {
   background: white;
   color: red;
   border: 2px solid red;
   margin-left: 153px;
-}
+} */
 .btn.btnc:hover{
   background: red;
   color:white;
