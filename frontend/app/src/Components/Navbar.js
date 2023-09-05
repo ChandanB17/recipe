@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import Headroom from 'react-headroom';
+import { useAuth0 } from "@auth0/auth0-react";
+import logo from './images/logo.png'
 const Navbar = () => {
     const { loginWithRedirect, isAuthenticated , logout , user } = useAuth0();
   return (
