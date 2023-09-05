@@ -27,9 +27,12 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/Contact">Contact Us</Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/Login">Login</Link>
+              </li>
               
               
-              {isAuthenticated && (
+              {/* {isAuthenticated && (
                   <li><p className='name px-2 mx-2 py-2'> {user.name}</p></li>
                 ) 
               }
@@ -49,7 +52,7 @@ const Navbar = () => {
                   <Link className="nav-link active" aria-current="page" to="/AddRecipe">Add recipes</Link>
                 </li>
                 ) 
-              }    
+              }     */}
             </ul>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Type here" aria-label="Search" />
