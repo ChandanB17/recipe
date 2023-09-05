@@ -9,6 +9,7 @@ import Breakfast from './Pages/Breakfast';
 import RecipeListPage from './Pages/RecipeListPage';
 import Footer from './Components/Footer';
 import ScrollToTop from './Components/ScrollToTop';
+import SignUp from './Pages/Signup';
 function App() {
   return (
     <div>
@@ -22,6 +23,7 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/AddRecipe" element={<RecipeListPage />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
         <Footer />
         </ScrollToTop>

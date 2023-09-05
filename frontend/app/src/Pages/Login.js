@@ -56,68 +56,91 @@
 
 // export default Login;
 
-import React, { useState } from "react"
-import axios from "axios"
-import { useNavigate, Link } from "react-router-dom"
+import React, { Component, useState } from "react";
 
+export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-function Login() {
+  function handleSubmit(e) {
+    e.preventDefault();
 
-    const history=useNavigate();
+    console.log(email, password);
+    fetch("http://localhost:4000/login-user", {
+      method: "POST",
+      crossDomain: true,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data, "userRegister");
+        if (data.status == "ok") {
+          alert("login successful");
+          window.localStorage.setItem("token", data.data);
+          window.localStorage.setItem("loggedIn", true);
 
-    const [email,setEmail]=useState('')
-    const [password,setPassword]=useState('')
-
-    async function submit(e){
-        e.preventDefault();
-
-        try{
-
-            await axios.post("http://localhost:8000/",{
-                email,password
-            })
-            .then(res=>{
-                if(res.data==="exist"){
-                    history("/home",{state:{id:email}})
-                }
-                else if(res.data==="notexist"){
-                    alert("User have not sign up")
-                }
-            })
-            .catch(e=>{
-                alert("wrong details")
-                console.log(e);
-            })
-
+          window.location.href = "./userDetails";
         }
-        catch(e){
-            console.log(e);
+      });
+  }
 
-        }
+  return (
+    <div className="auth-wrapper">
+      <div className="auth-inner">
+        <form onSubmit={handleSubmit}>
+          <h3>Sign In</h3>
 
-    }
+          <div className="mb-3">
+            <label>Email address</label>
+            <input
+              type="email"
+              className="form-control"
+              placeholder="Enter email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
 
+          <div className="mb-3">
+            <label>Password</label>
+            <input
+              type="password"
+              className="form-control"
+              placeholder="Enter password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
 
-    return (
-        <div className="login">
+          <div className="mb-3">
+            <div className="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                className="custom-control-input"
+                id="customCheck1"
+              />
+              <label className="custom-control-label" htmlFor="customCheck1">
+                Remember me
+              </label>
+            </div>
+          </div>
 
-            <h1>Login</h1>
-
-            <form action="POST">
-                <input type="email" onChange={(e) => { setEmail(e.target.value) }} placeholder="Email"  />
-                <input type="password" onChange={(e) => { setPassword(e.target.value) }} placeholder="Password"  />
-                <input type="submit" onClick={submit} />
-
-            </form>
-
-            <br />
-            <p>OR</p>
-            <br />
-
-            <Link to="/Signup">Signup Page</Link>
-
-        </div>
-    )
+          <div className="d-grid">
+            <button type="submit" className="btn btn-primary">
+              Submit
+            </button>
+          </div>
+          <p className="forgot-password text-right">
+            <a href="/signup">Sign Up</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  );
 }
-
-export default Login
