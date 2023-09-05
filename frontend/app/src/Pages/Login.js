@@ -43,7 +43,7 @@ function Login() {
                            Enter Your personal details and start journey with us
                        </Components.Paragraph>
                            <Components.GhostButton onClick={() => toggle(false)}>
-                               Sigin Up
+                               Sign Up
                            </Components.GhostButton> 
                      </Components.RightOverlayPanel>
  

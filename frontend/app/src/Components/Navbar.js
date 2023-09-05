@@ -2,17 +2,20 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import Headroom from 'react-headroom';
 const Navbar = () => {
+    const { loginWithRedirect, isAuthenticated , logout , user } = useAuth0();
   return (
     <div>
       <Headroom>
       <nav className="navbar navbar-expand-lg bg-body-tertiary py-1">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">Navbar</Link>
+        <Link class="navbar-brand" to="/">
+      <img src={logo} alt="FlavourFusion" width="60" height="60"/>
+    </Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 align-centre">
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/About">About Us</Link>
               </li>
@@ -25,7 +28,20 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/AddRecipe">Add recipes</Link>
               </li>
-              <Link className="btn nbtn btn-outline-danger mx-3" type="submit" to="/Login">Sign-up/Login</Link>
+              {isAuthenticated && (
+                  <li><p className='name px-2 mx-2 py-2'> {user.name}</p></li>
+                ) 
+              }
+              {isAuthenticated ? (
+                   <li>
+                   <div className='btn btn-outline-danger' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log Out</div>
+                   </li>
+              ):(
+                <li>
+                   <div className='btn btn-outline-danger' onClick={() => loginWithRedirect()}>Log In</div>
+                 </li>
+                
+              )}     
             </ul>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Type here" aria-label="Search" />

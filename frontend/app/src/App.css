@@ -406,3 +406,8 @@ button:hover {
   background: red;
   color:white;
 }
+.name{
+  font-weight:bolder;
+  font-style:italic;
+  background-color: greenyellow;
+}
