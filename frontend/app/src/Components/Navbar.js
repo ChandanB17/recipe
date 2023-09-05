@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import logo from './images/logo.png';
+import {useAuth0} from '@auth0/auth0-react';
 import Headroom from 'react-headroom';
 const Navbar = () => {
     const { loginWithRedirect, isAuthenticated , logout , user } = useAuth0();
@@ -25,27 +27,33 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/Contact">Contact Us</Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/AddRecipe">Add recipes</Link>
-              </li>
+              
+              
               {isAuthenticated && (
                   <li><p className='name px-2 mx-2 py-2'> {user.name}</p></li>
                 ) 
               }
               {isAuthenticated ? (
                    <li>
-                   <div className='btn btn-outline-danger' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log Out</div>
+                   <div className='btn btn-outline-danger mx-2' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log Out</div>
                    </li>
+                   
               ):(
                 <li>
-                   <div className='btn btn-outline-danger' onClick={() => loginWithRedirect()}>Log In</div>
+                   <div className='btn btn-outline-danger mx-2' onClick={() => loginWithRedirect()}>Log In/Sign Up</div>
                  </li>
                 
-              )}     
+              )} 
+              {isAuthenticated && (
+                  <li className="nav-item">
+                  <Link className="nav-link active" aria-current="page" to="/AddRecipe">Add recipes</Link>
+                </li>
+                ) 
+              }    
             </ul>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Type here" aria-label="Search" />
-              <button class="btn nbtn btn-outline-danger" type="submit">Search</button>
+              <button class="btn nbtn btn-outline-danger " type="submit">Search</button>
             </form>
           </div>
         </div>
