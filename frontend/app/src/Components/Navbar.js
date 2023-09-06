@@ -32,7 +32,7 @@ const Navbar = () => {
                 {isLoggedIn ? (
                   <>
                   <li>
-                    <button className="btn btn-outline-danger mx-2" onClick={logout} to='/'>
+                    <button className="btn btn-outline-danger mx-2" onClick={logout} to="/">
                       Logout
                     </button>
                   </li>

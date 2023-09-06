@@ -41,14 +41,14 @@ function Login() {
 
 
     return (
-        <div className="login">
+        <div className="login head ">
 
-            <h1>Login</h1>
+            <h1 className="head">Login</h1>
 
             <form action="POST">
                 <input type="email" onChange={(e) => { setEmail(e.target.value) }} placeholder="Email"  />
                 <input type="password" onChange={(e) => { setPassword(e.target.value) }} placeholder="Password"  />
-                <input type="submit" onClick={submit} />
+                <div className='btn btn-outline-danger' type="submit" onClick={submit} >Submit</div>
 
             </form>
 
