@@ -1,10 +1,4 @@
-import React, { useEffect, useState } from "react"
-import axios from "axios"
-import { useNavigate, Link } from "react-router-dom"
-
-
-function Login() {
-    const history=useNavigate();
+import React, { Component, useState } from "react";
 
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
@@ -12,30 +6,32 @@ function Login() {
     async function submit(e){
         e.preventDefault();
 
-        try{
-
-            await axios.post("http://localhost:8000/signup",{
-                email,password
-            })
-            .then(res=>{
-                if(res.data=="exist"){
-                    alert("User already exists")
-                }
-                else if(res.data=="notexist"){
-                    history("/home",{state:{id:email}})
-                }
-            })
-            .catch(e=>{
-                alert("wrong details")
-                console.log(e);
-            })
-
-        }
-        catch(e){
-            console.log(e);
-
-        }
-
+      console.log(fname, lname, email, password);
+      fetch("http://localhost:4000/register", {
+        method: "POST",
+        crossDomain: true,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+        body: JSON.stringify({
+          fname,
+          email,
+          lname,
+          password,
+          userType,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data, "userRegister");
+          if (data.status == "ok") {
+            alert("Registration Successful");
+          } else {
+            alert("Something went wrong");
+          }
+        });
     }
 
 
@@ -49,16 +45,18 @@ function Login() {
                 <input type="password" onChange={(e) => { setPassword(e.target.value) }} placeholder="Password" />
                 <input type="submit" onClick={submit} />
 
-            </form>
-
-            <br />
-            <p>OR</p>
-            <br />
-
-            <Link to="/Login">Login Page</Link>
-
-        </div>
-    )
+          <div className="d-grid">
+            <button type="submit" className="btn btn-primary">
+              Sign Up
+            </button>
+          </div>
+          <p className="forgot-password text-right">
+            Already registered <a href="/Login">sign in?</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  );
 }
 
 export default Login
