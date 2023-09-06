@@ -129,8 +129,8 @@ const Breakfast = () => {
       <h1 className="text-center">Recipes</h1>
       <Row className="mt-4">
         {breakfastItems.map((item, index) => (
-          <Col key={index} md="4" className="mb-4">
-            <Card className="h-100">
+          <Col key={index} md="12" className="mb-4">
+            <Card >
               <Card.Img variant="top" src={item.image} className="recipe-image" />
               <Card.Body className="d-flex flex-column">
                 <Card.Title>{item.title}</Card.Title>
