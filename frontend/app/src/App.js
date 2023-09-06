@@ -24,6 +24,7 @@ function App() {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/AddRecipe" element={<RecipeListPage />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/userDetails" element={<userDetails />} />
         </Routes>
         <Footer />
         </ScrollToTop>

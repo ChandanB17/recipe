@@ -1,1 +1,0 @@
-GET http://localhost:4000/paginatedUsers?page=5&limit=5
