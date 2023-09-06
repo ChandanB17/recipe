@@ -10,14 +10,14 @@ const RecipeContactUs = () => {
       <div className="contact-form">
         <h2 className='headc'>Contact Us</h2>
         <p>If you have any questions or feedback, feel free to get in touch!</p>
-        <form>
+        <div>
             <label htmlFor="name">Name</label>
           <div className="form-group">
             <input type="text" id="name" name="name" required />
           </div>
             <label htmlFor="email">Email</label>
           <div className="form-group">
-            <input type="email" id="email" name="email" required />
+            <input type="text" id="email" name="email" required />
           </div>
             <label htmlFor="message">Message</label>
           <div className="form-group">
@@ -27,7 +27,7 @@ const RecipeContactUs = () => {
           <button className='btn btnc btn-outline-danger ' type="submit">Send Message</button>
           </div>
           
-        </form>
+        </div>
         <Smc/>
       </div>
     </div>
