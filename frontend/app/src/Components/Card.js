@@ -104,10 +104,10 @@ export default function Card() {
           <div className="card p-card mb-3">
             <img src="https://images.unsplash.com/photo-1605908580297-f3e1c02e64ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" className="card-img-top" alt="..." />
             <div className="card-body">
-              <h5 className="card-title p-card">Kabab</h5>
-              <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <h5 className="card-title p-card">Kebab</h5>
+              <p className="card-text">These kebabs start with the most flavorful marinade mixture made with richly flavored ingredients like Worcestershire, soy sauce and bright red wine vinegar. And of course a generous amount of marinating time really allows the flavors to soak right into the beef and also help tenderize it.</p>
               <p className="card-text"><small className="text-body-secondary">Last updated 3 mins ago</small></p>
-              <Link to="/nep" className="btn m-btn btn-info">Read more</Link>
+              <Link to="/Breakfast" className="btn m-btn btn-info">Read more</Link>
             </div>
           </div>
 
@@ -118,9 +118,9 @@ export default function Card() {
             <img src="https://images.unsplash.com/photo-1552590635-27c2c2128abf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title p-card">Biriyani</h5>
-              <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p className="card-text">Chicken Biryani is a savory chicken and rice dish that includes layers of chicken, rice, and aromatics that are steamed together. The bottom layer of rice absorbs all the chicken juices as it cooks, giving it a tender texture and rich flavor, while the top layer of rice turns out white and fluffy. Buried in the Biryani, you'll find whole cuts of succulent chicken bursting with flavor from the potent array of spices, herbs, and aromatics it's marinated in.</p>
               <p className="card-text"><small className="text-body-secondary">Last updated 3 mins ago</small></p>
-              <Link to="/nep" className="btn m-btn btn-info">Read more</Link>
+              <Link to="/Breakfast" className="btn m-btn btn-info">Read more</Link>
             </div>
           </div>
 
@@ -130,9 +130,9 @@ export default function Card() {
             <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1981&q=80" className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title p-card">Pizza</h5>
-              <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p className="card-text">This homemade pizza recipe is easy to make with restaurant quality dough that bakes up to golden perfection! Top it with pizza sauce, mozzarella cheese and your favorite toppings and get ready for the best pizza ever..</p>
               <p className="card-text"><small className="text-body-secondary">Last updated 3 mins ago</small></p>
-              <Link to="/nep" className="btn m-btn btn-info">Read more</Link>
+              <Link to="/Breakfast" className="btn m-btn btn-info">Read more</Link>
             </div>
           </div>
 
@@ -142,9 +142,9 @@ export default function Card() {
             <img src="https://images.unsplash.com/photo-1556048029-9c5edf1aa695?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title p-card">Fruit Salad</h5>
-              <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p className="card-text">This fruit salad is perfect for a backyard bbq or any occasion. There are never leftovers! This is one of my favorite fruit salad recipes, as I think the citrusy sauce really makes it. This salad is tastier the longer you can let it soak in its juices. I prefer 3 to 4 hours in the refrigerator before I serve it..</p>
               <p className="card-text"><small className="text-body-secondary">Last updated 3 mins ago</small></p>
-              <Link to="/nep" className="btn m-btn btn-info">Read more</Link>
+              <Link to="/Breakfast" className="btn m-btn btn-info">Read more</Link>
             </div>
           </div>
 

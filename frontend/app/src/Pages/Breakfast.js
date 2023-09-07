@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import axios from 'axios';
 
-const API_KEY = '17041a4ddf19430db0f13105e2afb3f5'; 
+const API_KEY = '17041a4ddf19430db0f13105e2afb3f5';
 
 const SearchComponent = ({ onSearch }) => {
   const [keywords, setKeywords] = useState('');
@@ -22,32 +22,39 @@ const SearchComponent = ({ onSearch }) => {
 
   return (
     <div className="my-4">
-      <h3>Recipe Search</h3>
-      <input
-        type="text"
-        placeholder="Keywords"
-        value={keywords}
-        onChange={(e) => setKeywords(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Ingredients"
-        value={ingredients}
-        onChange={(e) => setIngredients(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Cuisine"
-        value={cuisine}
-        onChange={(e) => setCuisine(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Dietary Restrictions"
-        value={dietaryRestrictions}
-        onChange={(e) => setDietaryRestrictions(e.target.value)}
-      />
-      <button onClick={handleSearch}>Search</button>
+        <h3 className='head'>Recipe Search</h3>
+      <form className='rform'>
+
+        <input
+          type="text"
+          placeholder="Keywords"
+          className='ip'
+          value={keywords}
+          onChange={(e) => setKeywords(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Ingredients"
+          className='ip'
+          value={ingredients}
+          onChange={(e) => setIngredients(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Cuisine"
+          className='ip'
+          value={cuisine}
+          onChange={(e) => setCuisine(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Dietary Restrictions"
+          className='ip'
+          value={dietaryRestrictions}
+          onChange={(e) => setDietaryRestrictions(e.target.value)}
+        />
+        <button onClick={handleSearch} className="btn btn-outline-danger">Search</button>
+      </form>
     </div>
   );
 };
@@ -126,7 +133,7 @@ const Breakfast = () => {
     <Container className="my-5">
       <SearchComponent onSearch={setSearchCriteria} />
 
-      <h1 className="text-center">Recipes</h1>
+      <h1 className="text-center head">Recipes</h1>
       <Row className="mt-4">
         {breakfastItems.map((item, index) => (
           <Col key={index} md="12" className="mb-4">
