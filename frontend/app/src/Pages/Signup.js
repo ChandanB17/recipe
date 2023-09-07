@@ -45,7 +45,7 @@ function Login() {
             <h1 className="head">Signup</h1>
 
 
-            <form  action="POST">
+            <form className="forml" action="POST">
                 <input type="email" onChange={(e) => { setEmail(e.target.value) }} placeholder="Email"  />
                 <input type="password" onChange={(e) => { setPassword(e.target.value) }} placeholder="Password" />
                 <div type="submit" className="btn btn-outline-danger" onClick={submit} >Submit</div>

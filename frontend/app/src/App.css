@@ -68,7 +68,7 @@
   text-align: center;
   justify-content: center;
   font-weight: bold;
-  padding-left: 25px;
+  /* padding-left: 25px; */
 }
 .parah {
   text-align: center;
@@ -96,7 +96,13 @@
   background: red;
   color:white;
 }
-
+.c-card{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  
+}
 
 .c-card:hover{
   transform: scale(1.1);
@@ -121,6 +127,41 @@
   justify-content: center;
   display:flex;
 }
+@media (max-width: 750px) {
+  .social-container {
+    padding: 15px 30px; /* Adjust the padding to your desired size */
+    flex-direction: column;
+    align-items: center;
+    
+  }
+ 
+}
+@media (max-width: 552px) {
+  .car{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 124px;
+  }
+  .carhe {
+    font-size: 25px;
+}
+ 
+}
+@media (max-width: 992px) {
+  .form-control{
+    width: 500px;;
+    display: flex;
+    justify-content: left;
+  }
+  .search{
+    justify-content: center;
+    align-items: left;
+  }
+  
+ 
+}
 .socialc-container {
   padding: 25px 50px;
   justify-content: center;
@@ -140,8 +181,9 @@ justify-content: center;
 a.social {
   margin: 50px;
   transition: transform 250ms;
-  display: inline-block;
-}
+  display: flex;
+  }
+
 a.socials {
   margin: 50px;
   transition: transform 250ms;
@@ -419,3 +461,4 @@ button:hover {
   font-style:italic;
   background-color: greenyellow;
 }
+

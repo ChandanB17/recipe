@@ -9,7 +9,7 @@ export default function Card() {
         <div className='mx-5'>
           <div className='container'>
             <div className='row'>
-              <div className='card-1 col-md-3 mb-4' >
+              <div className='card-1 col-lg-3 mb-4' >
 
                 <div className="card m-card h-100" >
                   <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" className="card-img-top" alt="Error 404 " />
@@ -20,7 +20,7 @@ export default function Card() {
                   </div>
                 </div>
               </div>
-              <div className='col-md-3 mb-4'>
+              <div className='col-lg-3 mb-4'>
 
                 <div className="card m-card h-100">
                   <img src="https://plus.unsplash.com/premium_photo-1673809798970-30c14cfd0ab6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80" className="card-img-top" alt="Error 404" />
@@ -31,7 +31,7 @@ export default function Card() {
                   </div>
                 </div>
               </div>
-              <div className='col-md-3 mb-4'>
+              <div className='col-lg-3 mb-4'>
 
                 <div className="card m-card h-100">
                   <img src="https://images.unsplash.com/photo-1618219878829-8afd92751bed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" className="card-img-top" alt="Error" />
@@ -42,7 +42,7 @@ export default function Card() {
                   </div>
                 </div>
               </div>
-              <div className='col-md-3 mb-4'>
+              <div className='col-lg-3 mb-4'>
 
                 <div className="card m-card h-100">
                   <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1776&q=80" className="card-img-top" alt="Error 404 " />
@@ -62,36 +62,36 @@ export default function Card() {
         <div className='m-5'>
           <div className='container'>
             <div className='row'>
-              <div className='c-card col-md-1 mx-3 ' >
+              <div className='c-card col-lg-1 mx-3 ' >
               <Link to='/Breakfast'><img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80" className='img'  alt="Error 404 " /></Link>
                 <p className='para'>Sweet</p>
               </div>
 
-              <div className='c-card col-md-1 mx-3'>
+              <div className='c-card col-lg-1 mx-3'>
               <Link to='/Breakfast'><img src="https://images.unsplash.com/photo-1647482770207-06bfdc9458a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" className="img"  alt="Error 404 " /></Link>
                 <p className='para'>Dinner</p>
               </div>
-              <div className='c-card col-md-1 mx-3'>
+              <div className='c-card col-lg-1 mx-3'>
                 <Link to='/Breakfast'><img src="https://images.unsplash.com/photo-1598214886806-c87b84b7078b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1925&q=80" className="img"  alt="Error 404 " /></Link>
                 <p className='para'>Tasty</p>
               </div>
-              <div className='c-card col-md-1 mx-3 '>
+              <div className='c-card col-lg-1 mx-3 '>
                 <Link to='/Breakfast'><img src="https://images.unsplash.com/photo-1552654180-304709d2041e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1965&q=80" className="img"  alt="Error 404 " /></Link>
                 <p className='para'>Healthy</p>
               </div>
-              <div className='c-card col-md-1 mx-3 '>
+              <div className='c-card col-lg-1 mx-3 '>
                 <Link to='/Breakfast'><img src="https://images.unsplash.com/photo-1682970468783-0cc45cfdd1b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80" className="img"  alt="Error 404 " /></Link>
                 <p className='para'>Instant</p>
               </div>
-              <div className='c-card col-md-1 mx-3 '>
+              <div className='c-card col-lg-1 mx-3 '>
                 <Link to='/Breakfast'><img src="https://images.unsplash.com/photo-1600850056064-a8b380df8395?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" className="img"  alt="Error 404" />
 </Link>                <p className='para'>Vegan</p>
               </div>
-              <div className='c-card col-md-1 mx-3 '>
+              <div className='c-card col-lg-1 mx-3 '>
                 <Link to='/Breakfast'><img src="https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80" className="img"  alt="Error 404 " /></Link>
                 <p className='para'>Salads</p>
               </div>
-              <div className='c-card col-md-1 mx-3 '>
+              <div className='c-card col-lg-1 mx-3 '>
                 <Link to='/Breakfast'><img src="https://images.unsplash.com/photo-1652088079703-38f4a8d6b981?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1895&q=80" className="img"  alt="Error 404 " /></Link>
                 <p className='para'>Soups</p>
               </div>
