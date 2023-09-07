@@ -2,33 +2,41 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+
 const app = express();
+const port = process.env.PORT || 5000;
 
-// Connect to MongoDB using Mongoose
-mongoose.connect('mongodb://localhost:27017', { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => {
-    console.log('Connected to MongoDB');
-  })
-  .catch((error) => {
-    console.error('MongoDB connection error:', error);
-  });
+// MongoDB connection setup
+mongoose.connect('mongodb://127.0.0.1:27017/recipes', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+const db = mongoose.connection;
 
-const Recipe = require('./Recipe'); // Adjust the path as needed
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.once('open', () => {
+  console.log('Connected to MongoDB');
+});
 
-// Middleware
+// Define the Recipe model
+const Recipe = mongoose.model('Recipe', {
+  title: String,
+  ingredients: [String],
+  instructions: String,
+});
+
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
-
-// Create API endpoints for CRUD operations
 
 // Create a new recipe
 app.post('/api/recipes', async (req, res) => {
   try {
-    const newRecipe = await Recipe.create(req.body);
-    res.json(newRecipe);
+    const recipe = new Recipe(req.body);
+    const savedRecipe = await recipe.save();
+    res.json(savedRecipe);
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'An error occurred while creating the recipe.' });
+    res.status(500).json({ error: 'Could not create recipe' });
   }
 });
 
@@ -38,53 +46,10 @@ app.get('/api/recipes', async (req, res) => {
     const recipes = await Recipe.find();
     res.json(recipes);
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'An error occurred while fetching recipes.' });
+    res.status(500).json({ error: 'Could not fetch recipes' });
   }
 });
 
-// Get a specific recipe by ID
-app.get('/api/recipes/:id', async (req, res) => {
-  try {
-    const recipe = await Recipe.findById(req.params.id);
-    if (!recipe) {
-      res.status(404).json({ error: 'Recipe not found.' });
-      return;
-    }
-    res.json(recipe);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'An error occurred while fetching the recipe.' });
-  }
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
-
-// Update a recipe by ID
-app.put('/api/recipes/:id', async (req, res) => {
-  try {
-    const updatedRecipe = await Recipe.findByIdAndUpdate(req.params.id, req.body, { new: true });
-    if (!updatedRecipe) {
-      res.status(404).json({ error: 'Recipe not found.' });
-      return;
-    }
-    res.json(updatedRecipe);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'An error occurred while updating the recipe.' });
-  }
-});
-
-// Delete a recipe by ID
-app.delete('/api/recipes/:id', async (req, res) => {
-  try {
-    const deletedRecipe = await Recipe.findByIdAndRemove(req.params.id);
-    if (!deletedRecipe) {
-      res.status(404).json({ error: 'Recipe not found.' });
-      return;
-    }
-    res.json({ message: 'Recipe deleted successfully.' });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'An error occurred while deleting the recipe.' });
-  }
-});
-
